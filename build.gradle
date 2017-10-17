@@ -1,0 +1,11 @@
+apply plugin:'application'
+
+sourceSets {
+ main {
+  java {
+   srcDirs = ['src/com/codecramp']
+  }
+ }
+}
+
+mainClassName = "com.codecramp.HelloGradle"
