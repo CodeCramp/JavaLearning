@@ -1,4 +1,5 @@
 apply plugin:'application'
+apply plugin: 'eclipse'
 
 sourceSets {
  main {
@@ -8,4 +9,16 @@ sourceSets {
  }
 }
 
-mainClassName = "com.codecramp.HelloGradle"
+mainClassName = "com.codecramp.Application"
+
+repositories {
+    mavenCentral()
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+dependencies {
+  compile 'org.springframework:spring-context:5.0.0.RELEASE'
+}
+
