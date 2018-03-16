@@ -11,14 +11,19 @@ sourceSets {
 
 mainClassName = "com.codecramp.Application"
 
+// Repositories to pull jars/dependencies from.
 repositories {
     mavenCentral()
 }
 
+// Java version compatibility to use when compiling Java source.
 sourceCompatibility = 1.8
+// Java version to generate classes for.
 targetCompatibility = 1.8
 
+// Actual dependencies to be pulled.
 dependencies {
   compile 'org.springframework:spring-context:5.0.0.RELEASE'
 }
+
 

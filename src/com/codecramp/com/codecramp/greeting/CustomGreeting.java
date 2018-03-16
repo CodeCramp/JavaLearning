@@ -12,7 +12,7 @@ public class CustomGreeting implements Greeting {
 	public CustomGreeting() {	}
 	
 	@Autowired
-	public CustomGreeting(@Value("Hey There!!!") final String greeting, @Value("Mohit Kumar") final String greeter) {
+	public CustomGreeting(@Value("Hey There!!!") final String greeting, @Value("CodeCramp.com") final String greeter) {
 		this.greeting = greeting;
 		this.greeter = greeter;
 	}
