@@ -24,6 +24,8 @@ targetCompatibility = 1.8
 // Actual dependencies to be pulled.
 dependencies {
   compile 'org.springframework:spring-context:5.0.0.RELEASE'
+  compile group: 'org.slf4j', name: 'slf4j-api', version: '1.7.+'
+  compile group: 'ch.qos.logback', name: 'logback-classic', version: '1.+'
 }
 
 
