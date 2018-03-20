@@ -1,0 +1,32 @@
+<configuration>
+  <!-- Appender specifies the output location of the logs -->
+  <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+    encoders are assigned the type
+         ch.qos.logback.classic.encoder.PatternLayoutEncoder by default
+    <encoder>
+      <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{5} - %msg%n</pattern>
+    </encoder>
+  </appender>
+  <appender name="FILE" class="ch.qos.logback.core.FileAppender">
+    <!-- Keeping file in resources folder for quick access, usually it is some shared location
+     where everyone could see the logs, in case, anything goes wrong. -->
+    <file>resources/hellogradle.log</file>
+    <!-- Appends the new log messages in the same file -->
+    <append>true</append>
+    <!-- encoders are assigned the type
+         ch.qos.logback.classic.encoder.PatternLayoutEncoder by default -->
+    <encoder>
+      <Pattern>%d{yyyy-MM-dd_HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</Pattern>
+    </encoder>
+  </appender>
+  <!-- Generally, the level attribute is not necessary since -->
+  <!-- the level of the root is set to DEBUG by default.      --> 
+  <root level="DEBUG">
+      <appender-ref ref="FILE" />
+      <!-- <appender-ref ref="STDOUT" /> -->
+  </root> 
+  <!-- Setting com.codecramp.greeting to DEBUG -->
+  <logger name="consoleLogger" level="INFO">
+      <appender-ref ref="STDOUT" />
+  </logger> 
+</configuration>

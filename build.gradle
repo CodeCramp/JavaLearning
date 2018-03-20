@@ -6,6 +6,9 @@ sourceSets {
   java {
    srcDirs = ['src/com/codecramp']
   }
+  resources {
+   srcDir = ['resources'] 
+  }
  }
 }
 
